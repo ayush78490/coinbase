@@ -6,12 +6,10 @@ const WalletConnect = ({ onConnect }) => {
 
   const connectWallet = async () => {
     try {
-      // Request permission to access the Arweave wallet
       await window.arweaveWallet.connect(["ACCESS_ADDRESS", "SIGN_TRANSACTION"]);
-      // Retrieve wallet address
       const walletAddress = await window.arweaveWallet.getActiveAddress();
-      onConnect(walletAddress); // Pass the address to the parent component
-      setError(""); // Clear any previous error
+      onConnect(walletAddress);
+      setError("");
     } catch (err) {
       setError("Failed to connect wallet. Please try again.");
       console.error(err);
