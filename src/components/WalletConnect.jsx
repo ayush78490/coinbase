@@ -13,6 +13,8 @@ const WalletConnect = ({ onConnect }) => {
     } catch (err) {
       setError("Failed to connect wallet. Please try again.");
       console.error(err);
+
+
     }
   };
 
@@ -31,5 +33,7 @@ const WalletConnect = ({ onConnect }) => {
     </VStack>
   );
 };
+
+
 
 export default WalletConnect;

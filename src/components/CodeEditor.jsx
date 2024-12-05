@@ -5,6 +5,8 @@ import LanguageSelector from "./LanguageSelector";
 import { CODE_SNIPPETS } from "../constants";
 import Output from "./Output";
 
+
+
 const CodeEditor = () => {
   const editorRef = useRef();
   const [value, setValue] = useState("");
